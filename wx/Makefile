@@ -190,8 +190,14 @@ $(LIBTARGET): $(OBJECTS)
 
 VERSION=-version=wx$(WX_RELEASE_NODOT) -version=__$(PLATFORM)__ -version=$(ENCODING)
 
+D_VERSION: d-version.exe
+	d-version.exe >$@
+
 .d.obj:
 	$(DMD) $(VERSION) -I.. $(DFLAGS) -c -of$@ $<
+
+d-version.exe: version.obj
+	$(DMD) $(DFLAGS) $(LDFLAGS) -of$@ $<
 
 clean:
 	-del *.obj aui\*.obj

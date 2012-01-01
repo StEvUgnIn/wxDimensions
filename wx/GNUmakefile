@@ -171,7 +171,7 @@ OBJECTS = \
 
 SOURCES = $(shell ls *.d aui/*.d | grep -v DbGrid.d)
 
-all:  $(LIBTARGET)
+all:  D_VERSION $(LIBTARGET)
 
 # FreeBSD uses this
 PREFIX ?= /usr/local
@@ -259,11 +259,18 @@ endif
 
 VERSION=$(version)=wx$(WX_RELEASE_NODOT) $(version)=__$(PLATFORM)__ $(version)=$(ENCODING)
 
+D_VERSION: d-version$(EXEEXT)
+	./d-version > $@
+
 %.o:%.d
 	$(DC) $(VERSION) $(STCFLAGS) -I.. $(DFLAGS) -c $(output) $<
+
+d-version$(EXEEXT): version.o
+	$(DC) $(DFLAGS) $(LDFLAGS) $(output) $<
 
 clean:
 	-rm *.o aui/*.o ogl/*.o
 	-rm *.html aui/*.html ogl/*.html
+	-rm d-version$(EXEEXT)
 	-rm $(LIBTARGET)
 
