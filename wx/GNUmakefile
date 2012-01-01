@@ -215,6 +215,11 @@ endif
 endif
 endif
 
+ifeq ("$(COMPILER)","DMD")
+# typedef deprecated: http://d.puremagic.com/issues/show_bug.cgi?id=6572
+DFLAGS += -d
+endif
+
 ifeq ("$(STC)","1")
 STCFLAGS = $(version)=WXD_STYLEDTEXTCTRL
 endif
