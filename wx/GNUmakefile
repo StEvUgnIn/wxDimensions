@@ -260,7 +260,9 @@ $(LIBTARGET): $(OBJECTS)
 	ar rcs $@ $^
 endif
 
+ifdef ENCODING
 VERSION=$(version)=wx$(WX_RELEASE_NODOT) $(version)=__$(PLATFORM)__ $(version)=$(ENCODING)
+endif
 
 D_VERSION: d-version$(EXEEXT)
 	./d-version > $@
