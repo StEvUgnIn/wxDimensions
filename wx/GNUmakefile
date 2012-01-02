@@ -173,6 +173,9 @@ SOURCES = $(shell ls *.d aui/*.d | grep -v DbGrid.d)
 
 all:  D_VERSION $(LIBTARGET)
 
+COMPILER ?= DMD
+LIBRARY ?= Phobos
+
 # FreeBSD uses this
 PREFIX ?= /usr/local
 
