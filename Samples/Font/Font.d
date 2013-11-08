@@ -280,7 +280,7 @@ version(D_Version2) mixin("alias to!string toString;");
 			
 			string prefix = "Content-Type: text/plain; charset=";
 			
-			int pos = message.indexOf( prefix );
+			auto pos = message.indexOf( prefix );
 			
 			if ( pos == -1 )
 			{
@@ -290,7 +290,7 @@ version(D_Version2) mixin("alias to!string toString;");
 			
 			pos += prefix.length + 1; 
 			
-			int pos2 = pos;
+			auto pos2 = pos;
 			
 			while ( message[pos2] != '"' )
 			{
@@ -563,7 +563,7 @@ version(D_Version2) mixin("alias to!string toString;");
 			
 			if ( fontEnumerator.GotAny )
 			{
-				int nFacenames = fontEnumerator.Facenames.length;
+				auto nFacenames = fontEnumerator.Facenames.length;
 				if ( !silent )
 				{
 					Log.LogStatus( "Found {0} {1}fonts", nFacenames, 
