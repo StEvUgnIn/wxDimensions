@@ -347,7 +347,7 @@ alias std.file.getcwd GETCWD;
 			if (mcd.ShowModal() == wxID_OK)
 			{
 				int[] selections = mcd.GetSelections();
-				int count = selections.length;
+				auto count = selections.length;
 				string msg;
 				msg = "You selected " ~ .toString(count) ~ " items:\n";
 				for (int n = 0; n < count; n++)

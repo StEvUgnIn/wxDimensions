@@ -425,7 +425,7 @@ version(D_Version2) mixin("alias to!string toString;");
 		{
 			TreeItemId[] array = m_treeCtrl.Selections();
 
-			int count = array.length;
+			auto count = array.length;
 			
 			Log.LogMessage(.toString(count) ~ " items selected");
 
