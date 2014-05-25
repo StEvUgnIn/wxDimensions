@@ -50,7 +50,7 @@
 		<Linker>
 			<Add option="-lwxd -lwxc" />
 			<Add option="`wx-config --libs` -lstdc++" />
-			<Add option="-lgphobos -lm -lpthread" />
+			<Add option="-lgphobos2 -lm -lpthread" />
 			<Add directory="../.." />
 		</Linker>
 		<ExtraCommands>
