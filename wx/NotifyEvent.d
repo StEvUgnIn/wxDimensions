@@ -39,5 +39,5 @@ public import wx.CommandEvent;
 
 		public void Veto() { wxNotifyEvent_Veto(wxobj); }
 		public void Allow() { wxNotifyEvent_Veto(wxobj); }
-		public void IsAllowed() { return wxNotifyEvent_IsAllowed(wxobj); }
+		public bool IsAllowed() { return wxNotifyEvent_IsAllowed(wxobj); }
 	}
