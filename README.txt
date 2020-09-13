@@ -1,17 +1,17 @@
-wxD - wxWidgets bindings for D language
+wxDimensions - wxWidgets bindings for D language
 
 	(c) 2005 BERO <berobero@users.sourceforge.net>
 	(c) 2010 afb <afb@users.sourceforge.net>
 
 * About
 
-wxD is wxWidgets bindings for the D programming language.
+wxDimensions is modern wxWidgets bindings for the D programming language based on wxD.
 
 wxWidgets is a cross-platform GUI toolkit, which supports Windows,
 Mac OS X, *nix-like OSs - such as Linux,FreeBSD with X11/Motif/GTK.
 
-wxD is delivered work from wx.NET bindings 0.7.2 (wxWidgets 2.6.1)
-It should also work compiled with the later versions of wxWidgets.
+wxDimensions is delivered work from wx.NET bindings 0.7.2 (wxWidgets 2.6.1) and wxD.
+It would work compiled with the latter versions of wxWidgets.
 
 It is composed of two parts:
    + wxc is a C++ library which exposes the wxWidgets API as a 
@@ -21,6 +21,9 @@ It is composed of two parts:
 
 
 * Status
+0.17 (StEvUgnIn)
+Fixed building with DMD2
+Tested with DMD2 on Windows 7
 
 0.16 (afb)
 Fixed building with LDC 0.9.2 and DMD 2.054
